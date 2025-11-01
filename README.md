@@ -1,6 +1,8 @@
 # 🐾 Virtual Pet Simulator
 
 A delightful web-based virtual pet simulation game built with HTML, CSS, and JavaScript. Take care of your virtual pet by feeding, playing, and ensuring it gets enough rest!
+## Web Preview Link.
+https://aditya03126.github.io/Virtual-Pet-Simulator/
 
 ## 🌟 Features
 
@@ -191,3 +193,4 @@ This project is open source and available under the MIT License.
 ---
 
 **Enjoy taking care of your virtual pet! 🐾✨**
+
