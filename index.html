@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🐾 Virtual Pet Simulator 🐾</h1>
+            <div class="day-night-toggle">
+                <button id="toggleDayNight">🌙</button>
+            </div>
+        </header>
+
+        <!-- Pet Selection -->
+        <div class="pet-selection" id="petSelection">
+            <h2>Choose Your Pet</h2>
+            <div class="pet-options">
+                <div class="pet-option" data-pet="cat">
+                    <div class="pet-preview">🐱</div>
+                    <span>Cat</span>
+                </div>
+                <div class="pet-option" data-pet="dog">
+                    <div class="pet-preview">🐕</div>
+                    <span>Dog</span>
+                </div>
+                <div class="pet-option" data-pet="rabbit">
+                    <div class="pet-preview">🐰</div>
+                    <span>Rabbit</span>
+                </div>
+                <div class="pet-option" data-pet="hamster">
+                    <div class="pet-preview">🐹</div>
+                    <span>Hamster</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="game-area" id="gameArea" style="display: none;">
+            <!-- Pet Display -->
+            <div class="pet-container">
+                <div class="pet" id="pet">
+                    <div class="pet-emoji" id="petEmoji">🐱</div>
+                    <div class="pet-name" id="petName">Fluffy</div>
+                </div>
+                <div class="pet-status" id="petStatus">Happy</div>
+            </div>
+
+            <!-- Attributes Display -->
+            <div class="attributes">
+                <div class="attribute">
+                    <label>Hunger</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="hungerBar"></div>
+                    </div>
+                    <span class="attribute-value" id="hungerValue">50%</span>
+                </div>
+                <div class="attribute">
+                    <label>Happiness</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="happinessBar"></div>
+                    </div>
+                    <span class="attribute-value" id="happinessValue">50%</span>
+                </div>
+                <div class="attribute">
+                    <label>Energy</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="energyBar"></div>
+                    </div>
+                    <span class="attribute-value" id="energyValue">50%</span>
+                </div>
+            </div>
+
+            <!-- Interaction Buttons -->
+            <div class="interactions">
+                <button class="action-btn feed-btn" id="feedBtn">
+                    <span class="btn-icon">🍽️</span>
+                    <span class="btn-text">Feed</span>
+                </button>
+                <button class="action-btn play-btn" id="playBtn">
+                    <span class="btn-icon">🎾</span>
+                    <span class="btn-text">Play</span>
+                </button>
+                <button class="action-btn sleep-btn" id="sleepBtn">
+                    <span class="btn-icon">😴</span>
+                    <span class="btn-text">Sleep</span>
+                </button>
+            </div>
+
+            <!-- Stats and Achievements -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Age:</span>
+                    <span class="stat-value" id="ageValue">0 days</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Mood:</span>
+                    <span class="stat-value" id="moodValue">Happy</span>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="notifications" id="notifications"></div>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="reset-section">
+            <button class="reset-btn" id="resetBtn">🔄 New Pet</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
